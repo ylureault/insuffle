@@ -1,0 +1,28 @@
+SCREENSHOT.PNG - SPECIFICATIONS
+
+Le fichier screenshot.png doit être créé avec les spécifications suivantes :
+
+Dimensions : 1200 x 900 pixels
+Format : PNG
+Poids : < 1 MB (recommandé)
+
+Contenu suggéré :
+- Vue d'ensemble du thème avec le header
+- Section hero avec image pleine largeur
+- Aperçu de la disposition en grille des articles
+- Footer avec colonnes de widgets
+- Utilisation de la palette de couleurs par défaut (Bleu Insuffle)
+- Police Poppins visible
+- Design épuré et moderne
+
+Outils recommandés pour créer le screenshot :
+1. Créer une page de démonstration sur WordPress local
+2. Utiliser un outil de capture d'écran (Firefox Screenshot, Chrome DevTools)
+3. Redimensionner à 1200x900px avec Photoshop, GIMP ou Canva
+4. Exporter en PNG
+
+Note : WordPress affiche ce screenshot dans Apparence > Thèmes
+Il est important qu'il représente fidèlement le design du thème.
+
+Pour l'instant, un screenshot placeholder peut être généré via :
+https://placehold.co/1200x900/1f3a8b/white?text=Insuffle+Framework
