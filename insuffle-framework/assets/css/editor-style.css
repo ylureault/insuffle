@@ -1,0 +1,344 @@
+/**
+ * Editor styles - Insuffle Framework
+ * Styles for the Gutenberg block editor
+ *
+ * @package Insuffle_Framework
+ * @since 1.0.0
+ */
+
+/* Import main theme styles */
+@import url('../../../style.css');
+
+/* ==========================================
+   EDITOR SPECIFIC STYLES
+   ========================================== */
+
+.editor-styles-wrapper {
+  font-family: var(--insuffle-font-family);
+  font-size: var(--insuffle-font-base);
+  line-height: var(--insuffle-line-height-normal);
+  color: var(--insuffle-text);
+  background-color: var(--insuffle-bg);
+}
+
+/* ==========================================
+   EDITOR CONTENT WIDTH
+   ========================================== */
+
+.wp-block {
+  max-width: var(--insuffle-max-width-4xl);
+}
+
+.wp-block[data-align="wide"] {
+  max-width: var(--insuffle-max-width-6xl);
+}
+
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+
+/* ==========================================
+   EDITOR TYPOGRAPHY
+   ========================================== */
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  font-family: var(--insuffle-font-family);
+  font-weight: var(--insuffle-font-bold);
+  line-height: var(--insuffle-line-height-tight);
+  color: var(--insuffle-text);
+  margin-top: 0;
+  margin-bottom: var(--insuffle-space-lg);
+}
+
+.editor-styles-wrapper h1 {
+  font-size: var(--insuffle-font-5xl);
+  font-weight: var(--insuffle-font-extrabold);
+}
+
+.editor-styles-wrapper h2 {
+  font-size: var(--insuffle-font-4xl);
+}
+
+.editor-styles-wrapper h3 {
+  font-size: var(--insuffle-font-3xl);
+  font-weight: var(--insuffle-font-semibold);
+}
+
+.editor-styles-wrapper h4 {
+  font-size: var(--insuffle-font-2xl);
+  font-weight: var(--insuffle-font-semibold);
+}
+
+.editor-styles-wrapper h5 {
+  font-size: var(--insuffle-font-xl);
+  font-weight: var(--insuffle-font-medium);
+}
+
+.editor-styles-wrapper h6 {
+  font-size: var(--insuffle-font-lg);
+  font-weight: var(--insuffle-font-medium);
+}
+
+.editor-styles-wrapper p {
+  margin-bottom: var(--insuffle-space-lg);
+}
+
+.editor-styles-wrapper a {
+  color: var(--insuffle-primary);
+  text-decoration: none;
+}
+
+.editor-styles-wrapper a:hover {
+  color: var(--insuffle-primary-dark);
+  text-decoration: underline;
+}
+
+/* ==========================================
+   EDITOR BLOCKS
+   ========================================== */
+
+/* Paragraph */
+.editor-styles-wrapper .wp-block-paragraph {
+  line-height: var(--insuffle-line-height-relaxed);
+}
+
+/* Quote */
+.editor-styles-wrapper .wp-block-quote {
+  border-left: 4px solid var(--insuffle-secondary);
+  padding-left: var(--insuffle-space-xl);
+  margin: var(--insuffle-space-2xl) 0;
+  font-style: italic;
+  font-size: var(--insuffle-font-xl);
+}
+
+.editor-styles-wrapper .wp-block-quote cite {
+  font-style: normal;
+  font-size: var(--insuffle-font-sm);
+  color: var(--insuffle-text-light);
+}
+
+/* Pullquote */
+.editor-styles-wrapper .wp-block-pullquote {
+  border-top: 4px solid var(--insuffle-secondary);
+  border-bottom: 4px solid var(--insuffle-secondary);
+  padding: var(--insuffle-space-2xl) 0;
+  margin: var(--insuffle-space-3xl) 0;
+  text-align: center;
+}
+
+.editor-styles-wrapper .wp-block-pullquote blockquote {
+  font-size: var(--insuffle-font-2xl);
+  font-weight: var(--insuffle-font-semibold);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Lists */
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol {
+  padding-left: var(--insuffle-space-xl);
+  margin-bottom: var(--insuffle-space-lg);
+}
+
+.editor-styles-wrapper li {
+  margin-bottom: var(--insuffle-space-sm);
+}
+
+/* Image */
+.editor-styles-wrapper .wp-block-image {
+  margin-bottom: var(--insuffle-space-2xl);
+}
+
+.editor-styles-wrapper .wp-block-image img {
+  border-radius: var(--insuffle-radius-lg);
+}
+
+.editor-styles-wrapper .wp-block-image figcaption {
+  margin-top: var(--insuffle-space-md);
+  font-size: var(--insuffle-font-sm);
+  color: var(--insuffle-text-light);
+  text-align: center;
+}
+
+/* Gallery */
+.editor-styles-wrapper .wp-block-gallery {
+  margin-bottom: var(--insuffle-space-2xl);
+}
+
+/* Separator */
+.editor-styles-wrapper .wp-block-separator {
+  border-top: 2px solid var(--insuffle-bg-light);
+  margin: var(--insuffle-space-3xl) 0;
+}
+
+/* Button */
+.editor-styles-wrapper .wp-block-button__link {
+  padding: var(--insuffle-space-md) var(--insuffle-space-xl);
+  background-color: var(--insuffle-primary);
+  color: var(--insuffle-text-inverse);
+  font-weight: var(--insuffle-font-semibold);
+  border-radius: var(--insuffle-radius-lg);
+  text-decoration: none;
+  transition: all var(--insuffle-transition-base);
+  border: none;
+}
+
+.editor-styles-wrapper .wp-block-button__link:hover {
+  background-color: var(--insuffle-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--insuffle-shadow-md);
+}
+
+/* Columns */
+.editor-styles-wrapper .wp-block-columns {
+  margin-bottom: var(--insuffle-space-2xl);
+  gap: var(--insuffle-space-xl);
+}
+
+/* Group */
+.editor-styles-wrapper .wp-block-group {
+  margin-bottom: var(--insuffle-space-2xl);
+}
+
+.editor-styles-wrapper .wp-block-group.has-background {
+  padding: var(--insuffle-space-2xl);
+  border-radius: var(--insuffle-radius-lg);
+}
+
+/* Cover */
+.editor-styles-wrapper .wp-block-cover {
+  border-radius: var(--insuffle-radius-lg);
+  margin-bottom: var(--insuffle-space-2xl);
+  min-height: 400px;
+}
+
+/* Table */
+.editor-styles-wrapper .wp-block-table {
+  margin-bottom: var(--insuffle-space-2xl);
+}
+
+.editor-styles-wrapper .wp-block-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.editor-styles-wrapper .wp-block-table th,
+.editor-styles-wrapper .wp-block-table td {
+  padding: var(--insuffle-space-md);
+  border: 1px solid var(--insuffle-bg-light);
+}
+
+.editor-styles-wrapper .wp-block-table th {
+  background-color: var(--insuffle-bg-light);
+  font-weight: var(--insuffle-font-semibold);
+  text-align: left;
+}
+
+/* Code */
+.editor-styles-wrapper .wp-block-code {
+  background-color: var(--insuffle-bg-dark);
+  color: var(--insuffle-text-inverse);
+  padding: var(--insuffle-space-lg);
+  border-radius: var(--insuffle-radius-md);
+  font-family: 'Courier New', monospace;
+  font-size: var(--insuffle-font-sm);
+  overflow-x: auto;
+}
+
+/* Preformatted */
+.editor-styles-wrapper .wp-block-preformatted {
+  background-color: var(--insuffle-bg-light);
+  padding: var(--insuffle-space-lg);
+  border-radius: var(--insuffle-radius-md);
+  font-family: 'Courier New', monospace;
+  font-size: var(--insuffle-font-sm);
+  overflow-x: auto;
+}
+
+/* ==========================================
+   COLOR CLASSES
+   ========================================== */
+
+.editor-styles-wrapper .has-primary-color {
+  color: var(--insuffle-primary) !important;
+}
+
+.editor-styles-wrapper .has-primary-background-color {
+  background-color: var(--insuffle-primary) !important;
+}
+
+.editor-styles-wrapper .has-secondary-color {
+  color: var(--insuffle-secondary) !important;
+}
+
+.editor-styles-wrapper .has-secondary-background-color {
+  background-color: var(--insuffle-secondary) !important;
+}
+
+.editor-styles-wrapper .has-accent-color {
+  color: var(--insuffle-accent) !important;
+}
+
+.editor-styles-wrapper .has-accent-background-color {
+  background-color: var(--insuffle-accent) !important;
+}
+
+.editor-styles-wrapper .has-text-color {
+  color: var(--insuffle-text) !important;
+}
+
+.editor-styles-wrapper .has-white-color {
+  color: var(--insuffle-text-inverse) !important;
+}
+
+.editor-styles-wrapper .has-white-background-color {
+  background-color: var(--insuffle-bg) !important;
+}
+
+/* ==========================================
+   CUSTOM BLOCK STYLES
+   ========================================== */
+
+/* Insuffle Card */
+.editor-styles-wrapper .is-style-insuffle-card {
+  padding: var(--insuffle-space-2xl);
+  background-color: var(--insuffle-bg-light);
+  border-radius: var(--insuffle-radius-xl);
+  box-shadow: var(--insuffle-shadow-md);
+}
+
+/* Insuffle Highlight */
+.editor-styles-wrapper .is-style-insuffle-highlight {
+  padding: var(--insuffle-space-2xl);
+  background: linear-gradient(135deg, var(--insuffle-primary-light), var(--insuffle-secondary-light));
+  border-radius: var(--insuffle-radius-xl);
+  border-left: 4px solid var(--insuffle-primary);
+}
+
+/* Insuffle Button Outline */
+.editor-styles-wrapper .is-style-insuffle-outline .wp-block-button__link {
+  background-color: transparent;
+  color: var(--insuffle-primary);
+  border: 2px solid var(--insuffle-primary);
+}
+
+.editor-styles-wrapper .is-style-insuffle-outline .wp-block-button__link:hover {
+  background-color: var(--insuffle-primary);
+  color: var(--insuffle-text-inverse);
+}
+
+/* Insuffle Button Ghost */
+.editor-styles-wrapper .is-style-insuffle-ghost .wp-block-button__link {
+  background-color: transparent;
+  color: var(--insuffle-primary);
+  border: none;
+}
+
+.editor-styles-wrapper .is-style-insuffle-ghost .wp-block-button__link:hover {
+  background-color: var(--insuffle-primary-light);
+}

@@ -1,0 +1,423 @@
+/**
+ * Responsive styles - Insuffle Framework
+ *
+ * @package Insuffle_Framework
+ * @since 1.0.0
+ */
+
+/* ==========================================
+   TABLET (max-width: 1024px)
+   ========================================== */
+
+@media (max-width: 1024px) {
+  /* Content area */
+  .content-area.has-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .widget-area {
+    order: 2;
+  }
+
+  /* Formation & Offre layouts */
+  .formation-layout,
+  .offre-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .formation-info-card,
+  .offre-highlights {
+    position: static;
+  }
+
+  /* Contact layout */
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-widgets-grid.footer-columns-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-widgets-grid.footer-columns-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================
+   MOBILE (max-width: 768px)
+   ========================================== */
+
+@media (max-width: 768px) {
+  /* Header */
+  .header-inner {
+    gap: var(--insuffle-space-md);
+  }
+
+  /* Mobile menu toggle */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Navigation - Mobile menu */
+  .main-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--insuffle-bg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: all var(--insuffle-transition-base);
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  .main-navigation.toggled {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .main-navigation ul {
+    flex-direction: column;
+    padding: calc(80px + var(--insuffle-space-xl)) var(--insuffle-space-xl) var(--insuffle-space-xl);
+    gap: 0;
+  }
+
+  .main-navigation li {
+    width: 100%;
+    border-bottom: 1px solid var(--insuffle-bg-light);
+  }
+
+  .main-navigation a {
+    padding: var(--insuffle-space-lg) var(--insuffle-space-md);
+    width: 100%;
+  }
+
+  /* Submenu */
+  .main-navigation ul ul {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: var(--insuffle-bg-light);
+    margin-top: 0;
+    padding-left: var(--insuffle-space-lg);
+  }
+
+  .main-navigation ul ul a {
+    padding: var(--insuffle-space-md);
+  }
+
+  /* Header CTA */
+  .header-cta-button {
+    padding: var(--insuffle-space-sm) var(--insuffle-space-md);
+    font-size: var(--insuffle-font-sm);
+  }
+
+  /* Hero section */
+  .hero-section {
+    min-height: 300px;
+  }
+
+  .hero-content {
+    padding: var(--insuffle-space-3xl) var(--insuffle-space-lg);
+  }
+
+  .hero-excerpt {
+    font-size: var(--insuffle-font-lg);
+  }
+
+  /* Posts layouts */
+  .posts-wrapper.layout-grid,
+  .posts-wrapper.layout-card {
+    grid-template-columns: 1fr;
+  }
+
+  /* Content spacing */
+  .insuffle-section {
+    padding-top: var(--insuffle-space-2xl);
+    padding-bottom: var(--insuffle-space-2xl);
+  }
+
+  .content-area {
+    padding: var(--insuffle-space-2xl) 0;
+    gap: var(--insuffle-space-2xl);
+  }
+
+  /* Entry header */
+  .entry-header {
+    margin-bottom: var(--insuffle-space-xl);
+  }
+
+  .post-thumbnail {
+    margin-bottom: var(--insuffle-space-xl);
+  }
+
+  /* Post navigation */
+  .post-navigation-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-next {
+    text-align: left;
+  }
+
+  /* Related posts */
+  .related-posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Social share */
+  .social-share-list {
+    flex-wrap: wrap;
+  }
+
+  /* Comments */
+  .comment-list .children {
+    margin-left: var(--insuffle-space-lg);
+  }
+
+  /* Footer */
+  .footer-widgets-grid.footer-columns-4,
+  .footer-widgets-grid.footer-columns-3,
+  .footer-widgets-grid.footer-columns-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--insuffle-space-lg);
+  }
+
+  .footer-navigation ul {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--insuffle-space-md);
+  }
+
+  /* Pagination */
+  .pagination .nav-links {
+    gap: var(--insuffle-space-xs);
+  }
+
+  .pagination a,
+  .pagination .current {
+    min-width: 40px;
+    height: 40px;
+    padding: var(--insuffle-space-xs) var(--insuffle-space-sm);
+    font-size: var(--insuffle-font-sm);
+  }
+
+  /* Error 404 */
+  .error-404 {
+    padding: var(--insuffle-space-4xl) 0;
+  }
+
+  .error-404-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE (max-width: 480px)
+   ========================================== */
+
+@media (max-width: 480px) {
+  /* Container */
+  .insuffle-container {
+    padding-left: var(--insuffle-space-md);
+    padding-right: var(--insuffle-space-md);
+  }
+
+  /* Typography */
+  h1 {
+    font-size: var(--insuffle-font-4xl);
+  }
+
+  h2 {
+    font-size: var(--insuffle-font-3xl);
+  }
+
+  h3 {
+    font-size: var(--insuffle-font-2xl);
+  }
+
+  /* Header */
+  .site-header {
+    padding: var(--insuffle-space-md) 0;
+  }
+
+  .custom-logo {
+    max-height: 50px;
+  }
+
+  .site-title {
+    font-size: var(--insuffle-font-lg);
+  }
+
+  /* Hero section */
+  .hero-section {
+    min-height: 250px;
+  }
+
+  .hero-title {
+    font-size: var(--insuffle-font-3xl);
+  }
+
+  .hero-excerpt {
+    font-size: var(--insuffle-font-base);
+  }
+
+  /* Buttons */
+  .button,
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    padding: var(--insuffle-space-sm) var(--insuffle-space-lg);
+    font-size: var(--insuffle-font-sm);
+  }
+
+  /* Entry meta */
+  .entry-meta {
+    font-size: var(--insuffle-font-xs);
+    flex-direction: column;
+    gap: var(--insuffle-space-xs);
+  }
+
+  /* Social share */
+  .social-share-list a {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Footer */
+  .site-footer {
+    margin-top: var(--insuffle-space-4xl);
+  }
+
+  .footer-widgets {
+    padding: var(--insuffle-space-2xl) 0;
+  }
+
+  .footer-widgets-grid {
+    gap: var(--insuffle-space-xl);
+  }
+
+  .footer-bottom {
+    padding: var(--insuffle-space-lg) 0;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb-list {
+    font-size: var(--insuffle-font-xs);
+    gap: var(--insuffle-space-xs);
+  }
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+
+@media print {
+  /* Hide non-essential elements */
+  .site-header,
+  .site-footer,
+  .widget-area,
+  .breadcrumb,
+  .social-share,
+  .post-navigation,
+  .related-posts,
+  .comments-area,
+  .search-form,
+  .menu-toggle,
+  .header-cta-button {
+    display: none !important;
+  }
+
+  /* Optimize for print */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  .site {
+    max-width: 100%;
+  }
+
+  .insuffle-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .content-area {
+    grid-template-columns: 1fr !important;
+    padding: 0 !important;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  /* Show URLs after links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* Don't show URLs for images */
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Page breaks */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY - Reduced motion
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================
+   DARK MODE SUPPORT
+   ========================================== */
+
+@media (prefers-color-scheme: dark) {
+  /* This can be expanded if dark mode support is needed */
+  /* For now, respecting user's system preference but keeping light theme */
+}

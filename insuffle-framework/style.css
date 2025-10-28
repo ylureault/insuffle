@@ -1,0 +1,310 @@
+/*
+Theme Name: Insuffle Framework
+Theme URI: https://insuffle.com
+Author: Insuffle
+Author URI: https://insuffle.com
+Description: Un thème WordPress universel, élégant et personnalisable basé sur le design system Insuffle. Conçu pour être réutilisé et adapté facilement à tous types de sites : blog, vitrine, formation, séminaire, etc. Compatible Gutenberg, responsive, SEO-friendly et performant.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: insuffle-framework
+Tags: blog, one-column, two-columns, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks
+
+Insuffle Framework WordPress Theme, (C) 2025 Insuffle
+Insuffle Framework is distributed under the terms of the GNU GPL.
+*/
+
+/* ==========================================
+   VARIABLES CSS GLOBALES - INSUFFLE FRAMEWORK
+   ========================================== */
+
+:root {
+  /* === Palette de couleurs par défaut === */
+  /* Primaire - Bleu Insuffle */
+  --insuffle-primary: #1f3a8b;
+  --insuffle-primary-light: #dee2f1;
+  --insuffle-primary-dark: #0d1a4f;
+
+  /* Secondaire - Jaune Insuffle */
+  --insuffle-secondary: #ffde59;
+  --insuffle-secondary-light: #fff3b3;
+  --insuffle-secondary-dark: #c9a600;
+
+  /* Accent - Rouge */
+  --insuffle-accent: #ff5959;
+  --insuffle-accent-light: #ffdede;
+  --insuffle-accent-dark: #8b1f1f;
+
+  /* Texte */
+  --insuffle-text: #222222;
+  --insuffle-text-light: #555555;
+  --insuffle-text-inverse: #ffffff;
+
+  /* Fond */
+  --insuffle-bg: #ffffff;
+  --insuffle-bg-light: #f6f8fa;
+  --insuffle-bg-dark: #0b0b0b;
+
+  /* === Typographie === */
+  --insuffle-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+
+  /* Graisses */
+  --insuffle-font-light: 300;
+  --insuffle-font-regular: 400;
+  --insuffle-font-medium: 500;
+  --insuffle-font-semibold: 600;
+  --insuffle-font-bold: 700;
+  --insuffle-font-extrabold: 800;
+
+  /* Tailles de police */
+  --insuffle-font-xs: 0.75rem;     /* 12px */
+  --insuffle-font-sm: 0.875rem;    /* 14px */
+  --insuffle-font-base: 1rem;      /* 16px */
+  --insuffle-font-lg: 1.125rem;    /* 18px */
+  --insuffle-font-xl: 1.25rem;     /* 20px */
+  --insuffle-font-2xl: 1.5rem;     /* 24px */
+  --insuffle-font-3xl: 1.875rem;   /* 30px */
+  --insuffle-font-4xl: 2.25rem;    /* 36px */
+  --insuffle-font-5xl: 3rem;       /* 48px */
+  --insuffle-font-6xl: 3.75rem;    /* 60px */
+
+  /* Hauteurs de ligne */
+  --insuffle-line-height-tight: 1.25;
+  --insuffle-line-height-normal: 1.5;
+  --insuffle-line-height-relaxed: 1.75;
+  --insuffle-line-height-loose: 2;
+
+  /* === Espacements === */
+  --insuffle-space-xs: 0.25rem;    /* 4px */
+  --insuffle-space-sm: 0.5rem;     /* 8px */
+  --insuffle-space-md: 1rem;       /* 16px */
+  --insuffle-space-lg: 1.5rem;     /* 24px */
+  --insuffle-space-xl: 2rem;       /* 32px */
+  --insuffle-space-2xl: 3rem;      /* 48px */
+  --insuffle-space-3xl: 4rem;      /* 64px */
+  --insuffle-space-4xl: 6rem;      /* 96px */
+  --insuffle-space-5xl: 8rem;      /* 128px */
+
+  /* === Arrondis === */
+  --insuffle-radius-sm: 0.25rem;   /* 4px */
+  --insuffle-radius-md: 0.5rem;    /* 8px */
+  --insuffle-radius-lg: 1rem;      /* 16px */
+  --insuffle-radius-xl: 1.5rem;    /* 24px */
+  --insuffle-radius-2xl: 2rem;     /* 32px */
+  --insuffle-radius-full: 9999px;
+
+  /* === Ombres === */
+  --insuffle-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --insuffle-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --insuffle-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --insuffle-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --insuffle-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  /* === Transitions === */
+  --insuffle-transition-fast: 150ms ease-in-out;
+  --insuffle-transition-base: 250ms ease-in-out;
+  --insuffle-transition-slow: 350ms ease-in-out;
+
+  /* === Largeurs maximales === */
+  --insuffle-max-width-xs: 20rem;    /* 320px */
+  --insuffle-max-width-sm: 24rem;    /* 384px */
+  --insuffle-max-width-md: 28rem;    /* 448px */
+  --insuffle-max-width-lg: 32rem;    /* 512px */
+  --insuffle-max-width-xl: 36rem;    /* 576px */
+  --insuffle-max-width-2xl: 42rem;   /* 672px */
+  --insuffle-max-width-3xl: 48rem;   /* 768px */
+  --insuffle-max-width-4xl: 56rem;   /* 896px */
+  --insuffle-max-width-5xl: 64rem;   /* 1024px */
+  --insuffle-max-width-6xl: 72rem;   /* 1152px */
+  --insuffle-max-width-7xl: 80rem;   /* 1280px */
+  --insuffle-max-width-full: 100%;
+
+  /* === Breakpoints (pour JavaScript) === */
+  --insuffle-screen-sm: 640px;
+  --insuffle-screen-md: 768px;
+  --insuffle-screen-lg: 1024px;
+  --insuffle-screen-xl: 1280px;
+  --insuffle-screen-2xl: 1536px;
+}
+
+/* ==========================================
+   RESET ET STYLES DE BASE
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--insuffle-font-family);
+  font-size: var(--insuffle-font-base);
+  font-weight: var(--insuffle-font-regular);
+  line-height: var(--insuffle-line-height-normal);
+  color: var(--insuffle-text);
+  background-color: var(--insuffle-bg);
+}
+
+/* ==========================================
+   TYPOGRAPHIE DE BASE
+   ========================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--insuffle-space-lg) 0;
+  font-weight: var(--insuffle-font-bold);
+  line-height: var(--insuffle-line-height-tight);
+  color: var(--insuffle-text);
+}
+
+h1 {
+  font-size: var(--insuffle-font-5xl);
+  font-weight: var(--insuffle-font-extrabold);
+}
+
+h2 {
+  font-size: var(--insuffle-font-4xl);
+  font-weight: var(--insuffle-font-bold);
+}
+
+h3 {
+  font-size: var(--insuffle-font-3xl);
+  font-weight: var(--insuffle-font-semibold);
+}
+
+h4 {
+  font-size: var(--insuffle-font-2xl);
+  font-weight: var(--insuffle-font-semibold);
+}
+
+h5 {
+  font-size: var(--insuffle-font-xl);
+  font-weight: var(--insuffle-font-medium);
+}
+
+h6 {
+  font-size: var(--insuffle-font-lg);
+  font-weight: var(--insuffle-font-medium);
+}
+
+p {
+  margin: 0 0 var(--insuffle-space-lg) 0;
+}
+
+a {
+  color: var(--insuffle-primary);
+  text-decoration: none;
+  transition: color var(--insuffle-transition-base);
+}
+
+a:hover,
+a:focus {
+  color: var(--insuffle-primary-dark);
+  text-decoration: underline;
+}
+
+/* ==========================================
+   CLASSES UTILITAIRES
+   ========================================== */
+
+.insuffle-container {
+  width: 100%;
+  max-width: var(--insuffle-max-width-7xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--insuffle-space-lg);
+  padding-right: var(--insuffle-space-lg);
+}
+
+.insuffle-section {
+  padding-top: var(--insuffle-space-4xl);
+  padding-bottom: var(--insuffle-space-4xl);
+}
+
+@media (max-width: 768px) {
+  .insuffle-section {
+    padding-top: var(--insuffle-space-3xl);
+    padding-bottom: var(--insuffle-space-3xl);
+  }
+}
+
+/* ==========================================
+   RESPONSIVE TYPOGRAPHY
+   ========================================== */
+
+@media (max-width: 1024px) {
+  :root {
+    --insuffle-font-5xl: 2.5rem;   /* 40px */
+    --insuffle-font-4xl: 2rem;     /* 32px */
+    --insuffle-font-3xl: 1.5rem;   /* 24px */
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --insuffle-font-5xl: 2rem;     /* 32px */
+    --insuffle-font-4xl: 1.75rem;  /* 28px */
+    --insuffle-font-3xl: 1.375rem; /* 22px */
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITÉ
+   ========================================== */
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: var(--insuffle-bg-light);
+  border-radius: var(--insuffle-radius-sm);
+  box-shadow: var(--insuffle-shadow-lg);
+  clip: auto !important;
+  clip-path: none;
+  color: var(--insuffle-primary);
+  display: block;
+  font-size: var(--insuffle-font-sm);
+  font-weight: var(--insuffle-font-bold);
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+/* ==========================================
+   SKIP LINK
+   ========================================== */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
